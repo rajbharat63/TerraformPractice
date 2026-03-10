@@ -1,0 +1,585 @@
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice (main)
+$ 
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice (main)
+$ ls
+terraform_1.14.6_windows_amd64/  TerraformPractice/
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice (main)
+$ cd TerraformPractice/
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ ls
+'Day 1 Terraform Basic'/
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ cd Day\ 1\ Terraform\ Basic/
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ ls
+main.tf  provider.tf
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ terraform init
+Initializing the backend...
+Initializing provider plugins...
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)        
+$ aws --version
+$ aws --version
+aws-cli/2.15.10 Python/3.11.6 Windows/10 exe/AMD64 prompt/off
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ terraform init
+Initializing the backend...
+Initializing provider plugins...
+- Finding latest version of hashicorp/aws...
+- Installing hashicorp/aws v6.35.1...
+- Installed hashicorp/aws v6.35.1 (signed by HashiCorp)
+Terraform has created a lock file .terraform.lock.hcl to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ terraform init
+Initializing the backend...
+Initializing provider plugins...
+- Reusing previous version of hashicorp/aws from the dependency lock file
+- Using previously-installed hashicorp/aws v6.35.1
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ terraform init
+Initializing the backend...
+Initializing provider plugins...
+- Reusing previous version of hashicorp/aws from the dependency lock file
+╷
+│ Error: Failed to query available provider packages
+│
+│ Could not retrieve the list of available versions for provider hashicorp/aws: locked       
+│ provider registry.terraform.io/hashicorp/aws 6.35.1 does not match configured version      
+│ constraint 6.25.1; must use terraform init -upgrade to allow selection of new versions     
+│
+│ To see which modules are currently depending on hashicorp/aws and what versions are        
+│ specified, run the following command:
+│     terraform providers
+╵
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ terraform init --upgrade
+Initializing the backend...
+Initializing provider plugins...
+- Finding hashicorp/aws versions matching "6.25.1"...
+╷
+│ Error: Failed to query available provider packages
+│
+│ Could not retrieve the list of available versions for provider hashicorp/aws: no available 
+│ releases match the given constraints 6.25.1
+│
+│ To see which modules are currently depending on hashicorp/aws and what versions are        
+│ specified, run the following command:
+│     terraform providers
+╵
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ terraform --version
+Terraform v1.14.6
+on windows_amd64
++ provider registry.terraform.io/hashicorp/aws v6.35.1
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ terraform init --upgrade
+Initializing the backend...
+Initializing provider plugins...
+- Finding hashicorp/aws versions matching "6.25.0"...
+- Installing hashicorp/aws v6.25.0...
+- Installed hashicorp/aws v6.25.0 (signed by HashiCorp)
+Terraform has made some changes to the provider dependency selections recorded
+in the .terraform.lock.hcl file. Review those changes and commit them to your
+version control system if they represent changes you intended to make.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ terraform init --upgrade
+Initializing the backend...
+Initializing provider plugins...
+- Finding latest version of hashicorp/aws...
+- Installing hashicorp/aws v6.35.1...
+- Installed hashicorp/aws v6.35.1 (signed by HashiCorp)
+Terraform has made some changes to the provider dependency selections recorded
+in the .terraform.lock.hcl file. Review those changes and commit them to your
+version control system if they represent changes you intended to make.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ terraform --version
+Terraform v1.14.6
+on windows_amd64
++ provider registry.terraform.io/hashicorp/aws v6.35.1
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ terraform plan
+
+Terraform used the selected providers to generate the following execution plan. Resource     
+actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_vpc.name will be created
+  + resource "aws_vpc" "name" {
+      + arn                                  = (known after apply)
+      + cidr_block                           = "10.0.0.0/16"
+      + default_network_acl_id               = (known after apply)
+      + default_route_table_id               = (known after apply)
+      + default_security_group_id            = (known after apply)
+      + dhcp_options_id                      = (known after apply)
+      + enable_dns_hostnames                 = (known after apply)
+      + enable_dns_support                   = true
+      + enable_network_address_usage_metrics = (known after apply)
+      + id                                   = (known after apply)
+      + instance_tenancy                     = "default"
+      + ipv6_association_id                  = (known after apply)
+      + ipv6_cidr_block                      = (known after apply)
+      + ipv6_cidr_block_network_border_group = (known after apply)
+      + main_route_table_id                  = (known after apply)
+      + owner_id                             = (known after apply)
+      + region                               = "us-east-1"
+      + tags                                 = {
+          + "name" = "dev"
+        }
+      + tags_all                             = {
+          + "name" = "dev"
+        }
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+──────────────────────────────────────────────────────────────────────────────────────────── 
+
+Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take 
+exactly these actions if you run "terraform apply" now.
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ terraform apply
+
+Terraform used the selected providers to generate the following execution plan. Resource
+actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_vpc.name will be created
+  + resource "aws_vpc" "name" {
+      + arn                                  = (known after apply)
+      + cidr_block                           = "10.0.0.0/16"
+      + default_network_acl_id               = (known after apply)
+      + default_route_table_id               = (known after apply)
+      + default_security_group_id            = (known after apply)
+      + dhcp_options_id                      = (known after apply)
+      + enable_dns_hostnames                 = (known after apply)
+      + enable_dns_support                   = true
+      + enable_network_address_usage_metrics = (known after apply)
+      + id                                   = (known after apply)
+      + instance_tenancy                     = "default"
+      + ipv6_association_id                  = (known after apply)
+      + ipv6_cidr_block                      = (known after apply)
+      + ipv6_cidr_block_network_border_group = (known after apply)
+      + main_route_table_id                  = (known after apply)
+      + owner_id                             = (known after apply)
+      + region                               = "us-east-1"
+      + tags                                 = {
+          + "name" = "dev"
+        }
+      + tags_all                             = {
+          + "name" = "dev"
+        }
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_vpc.name: Creating...
+aws_vpc.name: Creation complete after 2s [id=vpc-045b529565a794861]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ terraform apply
+aws_vpc.name: Refreshing state... [id=vpc-045b529565a794861]
+
+Terraform used the selected providers to generate the following execution plan. Resource     
+actions are indicated with the following symbols:
+-/+ destroy and then create replacement
+
+Terraform will perform the following actions:
+
+  # aws_vpc.name must be replaced
+-/+ resource "aws_vpc" "name" {
+      ~ arn                                  = "arn:aws:ec2:us-east-1:590184008189:vpc/vpc-045b529565a794861" -> (known after apply)
+      - assign_generated_ipv6_cidr_block     = false -> null
+      ~ cidr_block                           = "10.0.0.0/16" -> "10.1.0.0/16" # forces replacement
+      ~ default_network_acl_id               = "acl-0aa22350ac61fcb1a" -> (known after apply)
+      ~ default_route_table_id               = "rtb-02a6f61326368b7ac" -> (known after apply)
+      ~ default_security_group_id            = "sg-0917dc2d1e3254634" -> (known after apply) 
+      ~ dhcp_options_id                      = "dopt-0054b087881c24d0a" -> (known after apply)
+      ~ enable_dns_hostnames                 = false -> (known after apply)
+      ~ enable_network_address_usage_metrics = false -> (known after apply)
+      ~ id                                   = "vpc-045b529565a794861" -> (known after apply)
+      + ipv6_association_id                  = (known after apply)
+      + ipv6_cidr_block                      = (known after apply)
+      + ipv6_cidr_block_network_border_group = (known after apply)
+      - ipv6_netmask_length                  = 0 -> null
+      ~ main_route_table_id                  = "rtb-02a6f61326368b7ac" -> (known after apply)
+      ~ owner_id                             = "590184008189" -> (known after apply)
+        tags                                 = {
+            "name" = "dev"
+        }
+        # (5 unchanged attributes hidden)
+    }
+
+Plan: 1 to add, 0 to change, 1 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_vpc.name: Destroying... [id=vpc-045b529565a794861]
+aws_vpc.name: Destruction complete after 1s
+aws_vpc.name: Creating...
+aws_vpc.name: Creation complete after 2s [id=vpc-0109eabc3ccc367db]
+
+Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ terraform destroy
+aws_vpc.name: Refreshing state... [id=vpc-0109eabc3ccc367db]
+
+Terraform used the selected providers to generate the following execution plan. Resource     
+actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_vpc.name will be destroyed
+  - resource "aws_vpc" "name" {
+      - arn                                  = "arn:aws:ec2:us-east-1:590184008189:vpc/vpc-0109eabc3ccc367db" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "10.1.0.0/16" -> null
+      - default_network_acl_id               = "acl-0dd6c2e57fd2e800a" -> null
+      - default_route_table_id               = "rtb-05d7e60a74995ebe8" -> null
+      - default_security_group_id            = "sg-0f2c29a70e584c6f0" -> null
+      - dhcp_options_id                      = "dopt-0054b087881c24d0a" -> null
+      - enable_dns_hostnames                 = false -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-0109eabc3ccc367db" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-05d7e60a74995ebe8" -> null
+      - owner_id                             = "590184008189" -> null
+      - region                               = "us-east-1" -> null
+      - tags                                 = {
+          - "name" = "dev"
+        } -> null
+      - tags_all                             = {
+          - "name" = "dev"
+        } -> null
+        # (4 unchanged attributes hidden)
+    }
+
+Plan: 0 to add, 0 to change, 1 to destroy.
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+aws_vpc.name: Destroying... [id=vpc-0109eabc3ccc367db]
+aws_vpc.name: Destruction complete after 1s
+
+Destroy complete! Resources: 1 destroyed.
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ terraform apply
+
+Terraform used the selected providers to generate the following execution plan. Resource     
+actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_vpc.name will be created
+  + resource "aws_vpc" "name" {
+      + arn                                  = (known after apply)
+      + cidr_block                           = "10.1.0.0/16"
+      + default_network_acl_id               = (known after apply)
+      + default_route_table_id               = (known after apply)
+      + default_security_group_id            = (known after apply)
+      + dhcp_options_id                      = (known after apply)
+      + enable_dns_hostnames                 = (known after apply)
+      + enable_dns_support                   = true
+      + enable_network_address_usage_metrics = (known after apply)
+      + id                                   = (known after apply)
+      + instance_tenancy                     = "default"
+      + ipv6_association_id                  = (known after apply)
+      + ipv6_cidr_block                      = (known after apply)
+      + ipv6_cidr_block_network_border_group = (known after apply)
+      + main_route_table_id                  = (known after apply)
+      + owner_id                             = (known after apply)
+      + region                               = "us-east-1"
+      + tags                                 = {
+          + "name" = "dev"
+        }
+      + tags_all                             = {
+          + "name" = "dev"
+        }
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_vpc.name: Creating...
+aws_vpc.name: Creation complete after 2s [id=vpc-0d1adc96c108bc01a]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ ls
+main.tf  provider.tf  terraform.tfstate  terraform.tfstate.backup
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice/Day 1 Terraform Basic (main)
+$ cd ..
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ ls
+'Day 1 Terraform Basic'/
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ mv Day\ 1\ Terraform\ Basic/ Day-1_Terraform_Basic
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ ls
+Day-1_Terraform_Basic/
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ ls
+Day-1_Terraform_Basic/
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ vi .gitignore
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ ls
+Day-1_Terraform_Basic/
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ ls -la
+total 17
+drwxr-xr-x 1 bhara 197609   0 Mar 10 00:45 ./
+drwxr-xr-x 1 bhara 197609   0 Mar  9 22:59 ../
+drwxr-xr-x 1 bhara 197609   0 Mar  9 22:55 .git/
+-rw-r--r-- 1 bhara 197609 155 Mar 10 00:45 .gitignore
+drwxr-xr-x 1 bhara 197609   0 Mar 10 00:42 Day-1_Terraform_Basic/
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        Day-1_Terraform_Basic/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git add .
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git commit -m "day-1"
+[main (root-commit) 324e2fe] day-1
+ 3 files changed, 35 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 Day-1_Terraform_Basic/main.tf
+ create mode 100644 Day-1_Terraform_Basic/provider.tf
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git push
+
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git remote add origin https://github.com/rajbharat63/TerraformPractice.git
+error: remote origin already exists.
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git push
+
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ ^C
+
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git commit -m "day-1"
+[main (root-commit) 324e2fe] day-1
+ 3 files changed, 35 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 Day-1_Terraform_Basic/main.tf
+ create mode 100644 Day-1_Terraform_Basic/provider.tf
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git push
+
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git remote add origin https://github.com/rajbharat63/TerraformPractice.git
+error: remote origin already exists.
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git push
+
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$^C
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git remote -v 
+origin  https://github.com/rajbharat63/TerraformPractice.git (fetch)
+origin  https://github.com/rajbharat63/TerraformPractice.git (push)
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git push -u origin main
+
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git remote -v
+origin  https://github.com/rajbharat63/TerraformPractice.git (fetch)
+origin  https://github.com/rajbharat63/TerraformPractice.git (push)
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git log 
+commit 324e2fe41a2eb64c78cdc9340769558b98b510a0 (HEAD -> main)
+Author: Raj <bharatrajn@gmail.com>
+Date:   Tue Mar 10 00:45:46 2026 -0400
+
+    day-1
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git log --oneline
+324e2fe (HEAD -> main) day-1
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/rajbharat63/TerraformPractice.git
+  Push  URL: https://github.com/rajbharat63/TerraformPractice.git
+  HEAD branch: (unknown)
+  Local branch configured for 'git pull':
+    main merges with remote main
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$ git push --verbose -u origin main
+Pushing to https://github.com/rajbharat63/TerraformPractice.git
+info: please complete authentication in your browser...
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 709 bytes | 177.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+POST git-receive-pack (900 bytes)
+To https://github.com/rajbharat63/TerraformPractice.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+updating local tracking ref 'refs/remotes/origin/main'
+
+bhara@DESKTOP-C2744K1 MINGW64 ~/Desktop/NareshIT/Devops/Terraform/TerraformPractice/TerraformPractice/TerraformPractice (main)
+$

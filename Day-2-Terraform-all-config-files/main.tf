@@ -8,7 +8,7 @@ resource "aws_instance" "dev" {
     instance_type = var.instance_type
     #name
     tags = {
-      name = "dev-instance"
+      Name = "dev-instance"
     } 
 }
 
@@ -17,7 +17,7 @@ resource "aws_instance" "test" {
     instance_type = var.instance_type
     #vpc_security_group_ids = [ aws_security_group.name.id ]
     tags = {
-      name = "test-instance"
+      Name = "test-instance"
     } 
 }
 

@@ -1,7 +1,7 @@
 #Creating a basic EC2 instance
 
 #creating a resource instance so aws_instance should be provided. Instance name "dev".
-resource "aws_instance" "dev" {               
+resource "aws_instance" "dev-instance" {               
     #ami id we are getting from variables.tf
     ami =  var.ami_id
     #instance type we are getting from the variable.tf file
@@ -14,11 +14,11 @@ resource "aws_instance" "dev" {
 
 resource "aws_instance" "test" {
     ami =  var.ami_id
-    instance_type = var.instance_type
+    instance_type = var.instance_type12
     #vpc_security_group_ids = [ aws_security_group.name.id ]
     tags = {
       Name = "test-instance"
-    } 
+    }
 }
 
 

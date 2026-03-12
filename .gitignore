@@ -9,3 +9,5 @@
 .terraform.lock.hcl
 # documents
 *.doc
+
+terraform_1.14.6_windows_amd64

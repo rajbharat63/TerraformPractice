@@ -11,15 +11,17 @@ resource "aws_instance" "dev-instance" {
       Name = "dev-instance"
     } 
 }
+ 
+#Commented below resource because of Day 9 Modules folder not using test instance. 
 
-resource "aws_instance" "test" {
-    ami =  var.ami_id
-    instance_type = var.instance_type12
+#resource "aws_instance" "test" {
+ #   ami =  var.ami_id
+  #  instance_type = var.instance_type12
     #vpc_security_group_ids = [ aws_security_group.name.id ]
-    tags = {
-      Name = "test-instance"
-    }
-}
+   # tags = {
+    #  Name = "test-instance"
+    #}
+#}
 
 
 

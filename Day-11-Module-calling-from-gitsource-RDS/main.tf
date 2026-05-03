@@ -22,7 +22,8 @@ db_allocated_storage  = var.db_allocated_storage
 db_username           = var.db_username
 
 #note here db_username is passing value to module variable and var.db_username is decalrined in variables.tf file and value is assigned in terraform.tfvars file
-
+#note here db_allocated_storage is passing the value to the module variable which is from Day-10-RDS-module variable section. 
+#and var.db_allocated_storage is passing the value from the local source variables.tf and terraform.tfvars
 
 backup_window      = "02:00-03:00"
 maintenance_window = "sun:04:00-sun:05:00"
